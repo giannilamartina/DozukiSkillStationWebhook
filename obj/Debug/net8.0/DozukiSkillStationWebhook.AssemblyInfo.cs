@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DozukiSkillStationWebhook")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c37ca4bc28fc9dd5d51dfbe4b248ea590670886")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f99272f4f6233da0a1abba811ebd5daf4bee256")]
 [assembly: System.Reflection.AssemblyProductAttribute("DozukiSkillStationWebhook")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DozukiSkillStationWebhook")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

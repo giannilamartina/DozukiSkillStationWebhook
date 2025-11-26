@@ -32,3 +32,7 @@ C:\Users\lamar\Desktop\DozukiSkillStationWebhook\obj\Debug\net8.0\refint\DozukiS
 C:\Users\lamar\Desktop\DozukiSkillStationWebhook\obj\Debug\net8.0\DozukiSkillStationWebhook.pdb
 C:\Users\lamar\Desktop\DozukiSkillStationWebhook\obj\Debug\net8.0\DozukiSkillStationWebhook.genruntimeconfig.cache
 C:\Users\lamar\Desktop\DozukiSkillStationWebhook\obj\Debug\net8.0\ref\DozukiSkillStationWebhook.dll
+C:\Users\lamar\Desktop\DozukiSkillStationWebhook\bin\Debug\net8.0\DozukiSkillStationWebhookRepo\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\lamar\Desktop\DozukiSkillStationWebhook\bin\Debug\net8.0\DozukiSkillStationWebhookRepo\bin\Debug\net8.0\appsettings.json
+C:\Users\lamar\Desktop\DozukiSkillStationWebhook\bin\Debug\net8.0\DozukiSkillStationWebhookRepo\bin\Debug\net8.0\DozukiSkillStationWebhook.deps.json
+C:\Users\lamar\Desktop\DozukiSkillStationWebhook\bin\Debug\net8.0\DozukiSkillStationWebhookRepo\bin\Debug\net8.0\DozukiSkillStationWebhook.runtimeconfig.json
