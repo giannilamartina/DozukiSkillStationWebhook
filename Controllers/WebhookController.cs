@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using DozukiSkillStationWebhook.Services;
 using System;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DozukiSkillStationWebhook.Controllers
@@ -13,10 +13,12 @@ namespace DozukiSkillStationWebhook.Controllers
     public class WebhookController : ControllerBase
     {
         private readonly ILogger<WebhookController> _logger;
+        private readonly DozukiAPI _dozukiAPI;
 
-        public WebhookController(ILogger<WebhookController> logger)
+        public WebhookController(ILogger<WebhookController> logger, DozukiAPI dozukiAPI)
         {
             _logger = logger;
+            _dozukiAPI = dozukiAPI;
         }
 
         [HttpPost]
@@ -64,9 +66,6 @@ namespace DozukiSkillStationWebhook.Controllers
             }
         }
 
-        /// <summary>
-        /// Processes a Course Stage Completed event
-        /// </summary>
         private async Task ProcessCourseStageCompleted(DozukiEventData data)
         {
             _logger.LogInformation(
@@ -77,12 +76,17 @@ namespace DozukiSkillStationWebhook.Controllers
                 data.DocCompletion?.GetCompletedAt()
             );
 
+            // Check for Quiz using the Course Title
+            var quizResponse = await _dozukiAPI.CheckForQuiz(data.Title);
+            
+            
             // TODO: Add your business logic here
             // Examples:
             // - Update database with completion status
             // - Send notification to user
             // - Trigger next stage in workflow
             // - Update external systems
+            // - Process quiz response: quizResponse
 
             await Task.CompletedTask;
         }

@@ -488,11 +488,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lamar\\Desktop\\DozukiSkillStationWebhook\\DozukiSkillStationWebhook.csproj",
+      "projectUniqueName": "C:\\Users\\lamar\\OneDrive\\Documents\\OneDrive\\DozukiSkillStationWebhook\\DozukiSkillStationWebhook.csproj",
       "projectName": "DozukiSkillStationWebhook",
-      "projectPath": "C:\\Users\\lamar\\Desktop\\DozukiSkillStationWebhook\\DozukiSkillStationWebhook.csproj",
+      "projectPath": "C:\\Users\\lamar\\OneDrive\\Documents\\OneDrive\\DozukiSkillStationWebhook\\DozukiSkillStationWebhook.csproj",
       "packagesPath": "C:\\Users\\lamar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lamar\\Desktop\\DozukiSkillStationWebhook\\obj\\",
+      "outputPath": "C:\\Users\\lamar\\OneDrive\\Documents\\OneDrive\\DozukiSkillStationWebhook\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

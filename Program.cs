@@ -7,6 +7,8 @@ builder.WebHost.UseUrls("http://localhost:5000");
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddHttpClient();
+builder.Services.AddScoped<DozukiSkillStationWebhook.Services.DozukiAPI>();
 
 var app = builder.Build();
 
