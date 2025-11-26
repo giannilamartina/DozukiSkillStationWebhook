@@ -8,22 +8,20 @@ namespace DozukiSkillStationWebhook
     /// </summary>
     public class DozukiWebhookPayload
     {
-        [JsonPropertyName("event")]
-        public string Event { get; set; }
+        [JsonPropertyName("siteName")]
+        public string SiteName { get; set; }
 
-        [JsonPropertyName("timestamp")]
-        public long Timestamp { get; set; }
+        [JsonPropertyName("siteDomain")]
+        public string SiteDomain { get; set; }
+
+        [JsonPropertyName("title")]
+        public string Title { get; set; }
+
+        [JsonPropertyName("description")]
+        public string Description { get; set; }
 
         [JsonPropertyName("data")]
         public DozukiEventData Data { get; set; }
-
-        /// <summary>
-        /// Gets the timestamp as a DateTime object
-        /// </summary>
-        public DateTime GetTimestamp()
-        {
-            return DateTimeOffset.FromUnixTimeSeconds(Timestamp).DateTime;
-        }
     }
 
     /// <summary>
@@ -31,36 +29,42 @@ namespace DozukiSkillStationWebhook
     /// </summary>
     public class DozukiEventData
     {
-        [JsonPropertyName("userId")]
+        [JsonPropertyName("course_stageid")]
+        public int CourseStageId { get; set; }
+
+        [JsonPropertyName("docid")]
+        public int DocId { get; set; }
+
+        [JsonPropertyName("doctype")]
+        public string DocType { get; set; }
+
+        [JsonPropertyName("title")]
+        public string Title { get; set; }
+
+        [JsonPropertyName("userid")]
         public int UserId { get; set; }
 
-        [JsonPropertyName("userName")]
-        public string UserName { get; set; }
+        [JsonPropertyName("doc_completion")]
+        public DozukiDocCompletion DocCompletion { get; set; }
+    }
 
-        [JsonPropertyName("userEmail")]
-        public string UserEmail { get; set; }
+    public class DozukiDocCompletion
+    {
+        [JsonPropertyName("course_assignment_stage_completionid")]
+        public int CourseAssignmentStageCompletionId { get; set; }
 
-        [JsonPropertyName("courseId")]
-        public int CourseId { get; set; }
+        [JsonPropertyName("init_date")]
+        public long InitDate { get; set; }
 
-        [JsonPropertyName("courseName")]
-        public string CourseName { get; set; }
-
-        [JsonPropertyName("stageId")]
-        public int StageId { get; set; }
-
-        [JsonPropertyName("stageName")]
-        public string StageName { get; set; }
-
-        [JsonPropertyName("completedAt")]
-        public long CompletedAt { get; set; }
+        [JsonPropertyName("end_date")]
+        public long EndDate { get; set; }
 
         /// <summary>
         /// Gets the completion timestamp as a DateTime object
         /// </summary>
         public DateTime GetCompletedAt()
         {
-            return DateTimeOffset.FromUnixTimeSeconds(CompletedAt).DateTime;
+            return DateTimeOffset.FromUnixTimeSeconds(EndDate).DateTime;
         }
     }
 }

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "owYFqZOE1LosVRnc3djEvvZRX4DONV9LCq1IUA9OPZ4=",
+  "Source": "DozukiSkillStationWebhook",
+  "BasePath": "_content/DozukiSkillStationWebhook",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
