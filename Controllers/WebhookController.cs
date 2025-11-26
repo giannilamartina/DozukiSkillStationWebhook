@@ -19,25 +19,7 @@ namespace DozukiSkillStationWebhook.Controllers
             _logger = logger;
         }
 
-        /// <summary>
-        /// DEBUG: Accepts any payload and logs the raw body
-        /// Use this endpoint temporarily to see what Dozuki is sending
-        /// </summary>
-        [HttpPost("debug")]
-        public async Task<IActionResult> DebugWebhook()
-        {
-            Request.EnableBuffering();
-            using var reader = new StreamReader(Request.Body, Encoding.UTF8, leaveOpen: true);
-            var rawBody = await reader.ReadToEndAsync();
-            Request.Body.Position = 0;
-
-            _logger.LogWarning("DEBUG: Received raw body: {RawBody}", rawBody);
-            _logger.LogWarning("DEBUG: Content-Type: {ContentType}", Request.ContentType);
-            _logger.LogWarning("DEBUG: Headers: {Headers}", string.Join(", ", Request.Headers.Select(h => $"{h.Key}={h.Value}")));
-
-            return Ok(new { message = "Debug: Body logged", contentType = Request.ContentType, bodyLength = rawBody.Length });
-        }
-
+        
 
         /// <summary>
         /// Receives webhook POST requests from Dozuki
