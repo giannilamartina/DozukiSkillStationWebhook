@@ -19,13 +19,6 @@ namespace DozukiSkillStationWebhook.Controllers
             _logger = logger;
         }
 
-        
-
-        /// <summary>
-        /// Receives webhook POST requests from Dozuki
-        /// </summary>
-        /// <param name="payload">The webhook payload</param>
-        /// <returns>200 OK if successful</returns>
         [HttpPost]
         public async Task<IActionResult> ReceiveDozukiWebhook([FromBody] DozukiWebhookPayload payload)
         {
@@ -62,7 +55,7 @@ namespace DozukiSkillStationWebhook.Controllers
                     _logger.LogWarning("Unknown event title: {Title}", payload.Title);
                 }
 
-                return Ok(new { message = "Webhook received successfully" });
+                return Ok(new { message = "Webhook received successfully"});
             }
             catch (Exception ex)
             {
@@ -77,7 +70,7 @@ namespace DozukiSkillStationWebhook.Controllers
         private async Task ProcessCourseStageCompleted(DozukiEventData data)
         {
             _logger.LogInformation(
-                "Course Stage Completed - User ID: {UserId}, Stage: {StageName}, Doc ID: {DocId}, Completed: {CompletedAt}",
+                "Course Stage Completed - User ID: {UserId}, Title: {Title}, Doc ID: {DocId}, Completed: {CompletedAt}",
                 data.UserId,
                 data.Title,
                 data.DocId,
