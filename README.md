@@ -21,10 +21,8 @@ POST http://localhost:5000/api/webhook/dozuki
 
 ## Using with ngrok
 
-Since you have ngrok running on port 5000, your public webhook URL is:
-```
-https://your-ngrok-url.ngrok.io/api/webhook/dozuki
-```
+ngrok http 5000
+
 
 Configure this URL in Dozuki's webhook settings.
 
